@@ -1,0 +1,41 @@
+[user]
+	name = Ido Sekely
+	email = my@email.com
+[core]
+	excludesfile = /Users/sekely/.gitignore_global
+	editor = vim
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[push]
+        default = current
+[remote]
+        pushdefault = origin
+[pull]
+        rebase = true
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[alias]
+	co = checkout
+	ci = commit
+	cad = commit -a --amend
+	st = status
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	lg = log --oneline --graph --decorate
+	ll = log --pretty=\"tformat:%Cred%h%Creset - [%ad] %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\" --abbrev-commit --date=short
+	clean = clean -fdx -e .idea
